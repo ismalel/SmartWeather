@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartWeather">
         <activity
-            android:name="com.ismael.smartweather.ui.view.dashboard.Dashboard"
+            android:name=".ui.view.detailWeather.DetailWeather"
             android:exported="false" />
         <activity
-            android:name="com.ismael.smartweather.ui.view.splash.SplashView"
+            android:name=".ui.view.dashboard.Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.splash.SplashView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

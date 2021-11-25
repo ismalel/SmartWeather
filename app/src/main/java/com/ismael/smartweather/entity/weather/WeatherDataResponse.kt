@@ -8,6 +8,6 @@ data class WeatherDataResponse (
   var cod     : String?    = null,
   var city    : City?      = City(),
   var message : Double?    = null,
-  var list    : ArrayList<List> = arrayListOf()
+  var list   : ArrayList<WeatherData> = arrayListOf()
 
 )

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">SmartWeather</string>
-    <string name="btn_txt">Acepter</string>
+    <string name="btn_txt">DONE</string>
+    <string name="dashboard_title">SmartWeather Home</string>
+    <string name="detail_title">SmartWeather Detail</string>
 </resources>

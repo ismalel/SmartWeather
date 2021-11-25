@@ -26,6 +26,6 @@ class RetrofitClient {
     }
 
     fun getURLApi(): String {
-        return "api.openweathermap.org/data/2.5/"
+        return "https://api.openweathermap.org/data/2.5/"
     }
 }

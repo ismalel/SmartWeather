@@ -12,6 +12,7 @@ interface IWeatherAPI {
         @GET("forecast")
         fun forecast(@Query("id") id: String?,
                      @Query("cnt") cnt: Int,
-                     @Query("appid") apiKey: String?) : Observable<WeatherDataResponse>
+                     @Query("appid") apiKey: String?,
+                     @Query("units") units: String?) : Observable<WeatherDataResponse>
     }
 }

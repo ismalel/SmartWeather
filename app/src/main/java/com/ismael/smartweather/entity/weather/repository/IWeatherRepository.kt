@@ -4,5 +4,5 @@ import com.ismael.smartweather.WeatherDataResponse
 import io.reactivex.Observable
 
 interface IWeatherRepository {
-    fun forecast(id: String?, cnt: Int, appid: String?): Observable<WeatherDataResponse>
+    fun forecast(id: String?, cnt: Int, appid: String?, units: String?): Observable<WeatherDataResponse>
 }

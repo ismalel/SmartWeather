@@ -1,6 +1,9 @@
 package com.ismael.smartweather
 
-class List (
+import java.util.*
+import kotlin.collections.ArrayList
+
+class WeatherData (
 
   var dt         : Int?          = null,
   var main       : Main?         = Main(),
@@ -11,6 +14,6 @@ class List (
   var pop        : Double?       = null,
   var rain       : Rain?         = Rain(),
   var sys        : Sys?          = Sys(),
-  var dtTxt      : String?       = null
+  var dt_txt      : String?       = null
 
 )

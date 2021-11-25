@@ -9,9 +9,9 @@ import io.reactivex.schedulers.Schedulers
 class WeatherRepository: IWeatherRepository {
     var weatherRetrofitModule: WeatherRetrofitModule = WeatherRetrofitModule()
 
-    override fun forecast(id: String?, cnt: Int, appid: String?): Observable<WeatherDataResponse> {
+    override fun forecast(id: String?, cnt: Int, appid: String?, units: String?): Observable<WeatherDataResponse> {
         return weatherRetrofitModule.forecast()
-            .forecast(id,cnt,appid)
+            .forecast(id,cnt,appid,units)
             ?.subscribeOn(Schedulers.io())
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.flatMap { weatherData ->

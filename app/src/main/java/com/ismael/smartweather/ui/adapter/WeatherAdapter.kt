@@ -4,11 +4,11 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ismael.smartweather.List
+import com.ismael.smartweather.WeatherData
 import com.ismael.smartweather.databinding.ItemWeatherBinding
 
 class WeatherAdapter (
-    private val data: ArrayList<List>,
+    private val data: ArrayList<WeatherData>,
     val onActionListener: OnActionListener
 ): RecyclerView.Adapter<WeatherAdapter.ViewHolder>(){
 
@@ -28,15 +28,14 @@ class WeatherAdapter (
     inner class ViewHolder(private var binding: ItemWeatherBinding): RecyclerView.ViewHolder(binding.root){
         @SuppressLint("SetTextI18n")
         var index = 0;
-        fun bind(weatherList: List) {
-            binding.tvDay.text = "Day 1"
-            binding.tvDate.text = weatherList.dtTxt
-            binding.tvWeather.text = weatherList.weather.get(0).main
-            binding.cvWeatherItem.setOnClickListener { onActionListener.onWeatherSelected(weatherList) }
+        fun bind(weatherData: WeatherData) {
+            binding.tvDate.text = "Date: " + weatherData.dt_txt
+            binding.tvWeather.text = "Weather: " + weatherData.weather.get(0).main
+            binding.cvWeatherItem.setOnClickListener { onActionListener.onWeatherSelected(weatherData) }
         }
     }
 
     interface OnActionListener{
-        fun onWeatherSelected(weatherList: List)
+        fun onWeatherSelected(weatherData: WeatherData)
     }
 }
